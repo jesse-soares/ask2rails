@@ -1,0 +1,13 @@
+pt-BR:
+  helpers:
+    submit:
+      user:
+        create: "Create my account"
+
+  form:
+    error_message: "Check the form before continue:"
+    user:
+      name: "Your name"
+      email: "Your e-mail"
+      password: "Your password"
+      password_confirmation: "Confirm your password"

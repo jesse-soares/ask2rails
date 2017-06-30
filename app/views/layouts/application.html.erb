@@ -3,11 +3,16 @@
   <head>
     <title>Ask2rails</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
   <body>
+    <% flash.each do |type, message| %>
+      <p class="<%= type %>">
+      <%= message %>
+      </p>
+    <% end %>
+    
     <%= yield %>
   </body>
 </html>
