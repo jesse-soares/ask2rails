@@ -2,7 +2,7 @@ class User < ApplicationRecord
 
   EMAIL_FORMAT = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
 
-  has_secure_password
+  has_secure_password # create and validate fields :password, :password_confirmation and :password_digest
 
   validates_presence_of :name
   validates_format_of :email, :with => EMAIL_FORMAT

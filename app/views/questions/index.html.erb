@@ -1,1 +1,11 @@
 <%= link_to t("menu.signup"), "/signup" %>
+
+<% unless logged_in? %>
+  <%= link_to t("menu.login"), "/login" %>
+<% end %>
+
+<% if logged_in? %>
+  <p>
+    <%= t("greeting.message", :name => current_user.name) %>
+  </p>
+<% end %>

@@ -6,6 +6,10 @@ pt-BR:
 
   form:
     error_message: "Check the form before continue:"
+
+    buttons:
+      login: "Login"
+
     user:
       name: "Your name"
       email: "Your e-mail"

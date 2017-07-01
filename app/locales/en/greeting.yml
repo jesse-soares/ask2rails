@@ -1,0 +1,3 @@
+pt-BR:
+  greeting:
+    message: "Hello, %{name}"
