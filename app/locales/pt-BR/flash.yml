@@ -3,3 +3,6 @@ pt-BR:
     users:
       create:
         notice: Seu cadastro foi realizado com sucesso. Informe seus dados para entrar!
+    sessions:
+      create:
+        alert: E-mail/senha inválidos

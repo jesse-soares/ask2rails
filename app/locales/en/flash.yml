@@ -3,3 +3,6 @@ pt-BR:
     users:
       create:
         notice: Account successfully created. Input your data to login!
+    sessions:
+      create:
+        alert: E-mail/senha invalid

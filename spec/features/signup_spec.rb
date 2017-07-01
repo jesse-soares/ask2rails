@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Signup" do
+RSpec.describe "Signup", type: :feature do
 
   context "with valid data" do
 
@@ -39,6 +39,19 @@ RSpec.describe "Signup" do
 
     it "displays error message" do
       expect(page).to have_content(t("form.error_message"))
+    end
+  end
+
+  context "when already logged in" do
+
+    before do
+      @user = FactoryGirl.create(:user)
+      login_as(@user)
+      visit "/signup"
+    end
+
+    it "redirects to the home page" do
+      expect(current_path).to eql("/")
     end
   end
   

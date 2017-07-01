@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Authentication do
+RSpec.describe Authentication, type: :model do
 
   context "with valid credentials" do
     before do

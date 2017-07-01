@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_action :redirect_logged_user
 
   def new
   end
@@ -6,9 +7,14 @@ class SessionsController < ApplicationController
   def create
     user = Authentication.authenticate(params[:email], params[:password])
 
-    reset_session
-    session[:user_id] = user.id
+    if user
+      reset_session
+      session[:user_id] = user.id
 
-    redirect_to "/"
+      redirect_to "/"
+    else
+      flash.now[:alert] = t("flash.sessions.create.alert")
+      render :new
+    end
   end
 end
