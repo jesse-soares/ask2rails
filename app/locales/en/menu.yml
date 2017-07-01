@@ -1,4 +1,5 @@
 pt-BR:
   menu:
-    signup: "Create my account"
-    login: "Login"
+    signup: Create my account
+    login: Login
+    logout: Logout

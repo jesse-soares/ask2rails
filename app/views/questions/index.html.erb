@@ -1,5 +1,9 @@
 <%= link_to t("menu.signup"), "/signup" %>
 
+<% if logged_in? %>
+  <%= link_to t("menu.logout"), "/logout" %>
+<% end %>
+
 <% unless logged_in? %>
   <%= link_to t("menu.login"), "/login" %>
 <% end %>

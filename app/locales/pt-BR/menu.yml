@@ -1,4 +1,5 @@
 pt-BR:
   menu:
-    signup: "Quero me cadastrar"
-    login: "Acessar minha conta"
+    signup: Quero me cadastrar
+    login: Acessar minha conta
+    logout: Sair

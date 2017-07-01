@@ -3,7 +3,7 @@ module FeatureHelper
     visit "/"
     click_link t("menu.login")
 
-    fill_in t("form.user.email"), :with => @user.email
+    fill_in t("form.user.email"), :with => user.email
     fill_in t("form.user.password"), :with => "test"
     click_button t("form.buttons.login")
   end
