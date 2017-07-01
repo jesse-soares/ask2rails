@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "/", to: "questions#index"
+  root to: "questions#index"
 
   get  "/signup", to: "users#new"
   post "/signup", to: "users#create"

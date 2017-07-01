@@ -7,7 +7,7 @@ RSpec.describe "Login", type: :feature do
     before do
       @user = FactoryGirl.create(:user)
 
-      visit "/"
+      visit root_path
       click_link t("menu.login")
 
       fill_in t("form.user.email"), :with => @user.email
@@ -16,7 +16,7 @@ RSpec.describe "Login", type: :feature do
     end
 
     it "redirects to the home page" do
-      expect(current_path).to eql("/")
+      expect(current_path).to eql(root_path)
     end
 
     it "displays welcome message" do
@@ -34,7 +34,7 @@ RSpec.describe "Login", type: :feature do
     before do
       @user = FactoryGirl.create(:user)
 
-      visit "/"
+      visit root_path
       click_link t("menu.login")
 
       fill_in t("form.user.email"), :with => @user.email
@@ -43,7 +43,7 @@ RSpec.describe "Login", type: :feature do
     end
 
     it "render login page" do
-      expect(current_path).to eql("/login")
+      expect(current_path).to eql(login_path)
     end
 
     it "displays error message" do
@@ -56,11 +56,11 @@ RSpec.describe "Login", type: :feature do
     before do
       @user = FactoryGirl.create(:user)
       login_as(@user)
-      visit "/login"
+      visit login_path
     end
 
     it "redirects to the home page" do
-      expect(current_path).to eql("/")
+      expect(current_path).to eql(root_path)
     end
   end
 end

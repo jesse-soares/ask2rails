@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       reset_session
       session[:user_id] = user.id
 
-      redirect_to "/"
+      redirect_to root_path
     else
       flash.now[:alert] = t("flash.sessions.create.alert")
       render :new
@@ -20,6 +20,6 @@ class SessionsController < ApplicationController
 
   def destroy
     reset_session
-    redirect_to "/login"
+    redirect_to login_path
   end
 end

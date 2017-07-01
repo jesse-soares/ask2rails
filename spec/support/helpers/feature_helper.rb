@@ -1,6 +1,6 @@
 module FeatureHelper
   def login_as(user)
-    visit "/"
+    visit root_path
     click_link t("menu.login")
 
     fill_in t("form.user.email"), :with => user.email

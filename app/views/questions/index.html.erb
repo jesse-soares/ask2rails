@@ -1,11 +1,11 @@
-<%= link_to t("menu.signup"), "/signup" %>
+<%= link_to t("menu.signup"), signup_path %>
 
 <% if logged_in? %>
-  <%= link_to t("menu.logout"), "/logout" %>
+  <%= link_to t("menu.logout"), logout_path %>
 <% end %>
 
 <% unless logged_in? %>
-  <%= link_to t("menu.login"), "/login" %>
+  <%= link_to t("menu.login"), login_path %>
 <% end %>
 
 <% if logged_in? %>

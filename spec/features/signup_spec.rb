@@ -5,7 +5,7 @@ RSpec.describe "Signup", type: :feature do
   context "with valid data" do
 
     before do
-      visit "/"
+      visit root_path
       click_link t("menu.signup")
 
       fill_in t("form.user.name"), :with => "John Doe"
@@ -16,7 +16,7 @@ RSpec.describe "Signup", type: :feature do
     end
     
     it "redirect to the login page" do
-      expect(current_path).to eql("/login")
+      expect(current_path).to eql(login_path)
     end
 
     it "displays success message" do
@@ -27,14 +27,14 @@ RSpec.describe "Signup", type: :feature do
   context "with invalid data" do
 
     before do
-      visit "/"
+      visit root_path
       click_link t("menu.signup")
 
       click_button t("helpers.submit.user.create")
     end
 
     it "displays signup form" do
-      expect(current_path).to eql("/signup")
+      expect(current_path).to eql(signup_path)
     end
 
     it "displays error message" do
@@ -47,11 +47,11 @@ RSpec.describe "Signup", type: :feature do
     before do
       @user = FactoryGirl.create(:user)
       login_as(@user)
-      visit "/signup"
+      visit signup_path
     end
 
     it "redirects to the home page" do
-      expect(current_path).to eql("/")
+      expect(current_path).to eql(root_path)
     end
   end
   
