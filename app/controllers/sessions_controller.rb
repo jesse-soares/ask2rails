@@ -10,8 +10,9 @@ class SessionsController < ApplicationController
     if user
       reset_session
       session[:user_id] = user.id
+      return_to = ReturnTo.new(root_path, params[:return_to]).path
 
-      redirect_to root_path
+      redirect_to return_to
     else
       flash.now[:alert] = t("flash.sessions.create.alert")
       render :new

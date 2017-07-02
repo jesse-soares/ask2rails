@@ -1,5 +1,6 @@
 <%= form_tag login_path do %>
   <p>
+    <%= hidden_field_tag :return_to, params[:return_to] %>
     <%= label_tag :email, t("form.user.email") %>
     <%= email_field_tag :email %>
   </p>

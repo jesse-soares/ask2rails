@@ -3,6 +3,8 @@ pt-BR:
     submit:
       user:
         create: "Create my account"
+      question:
+        create: "Add question"
 
   form:
     error_message: "Check the form before continue:"
@@ -15,3 +17,8 @@ pt-BR:
       email: "Your e-mail"
       password: "Your password"
       password_confirmation: "Confirm your password"
+
+    question:
+      title: "Question title"
+      description: "Insert your question description"
+      category: "Category"

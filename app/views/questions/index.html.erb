@@ -1,11 +1,13 @@
+<%= link_to t("menu.new_question"), new_question_path %>
+
+<% unless logged_in? %>
+  <%= link_to t("menu.login"), login_path %>
+<% end %>
+
 <%= link_to t("menu.signup"), signup_path %>
 
 <% if logged_in? %>
   <%= link_to t("menu.logout"), logout_path %>
-<% end %>
-
-<% unless logged_in? %>
-  <%= link_to t("menu.login"), login_path %>
 <% end %>
 
 <% if logged_in? %>

@@ -3,6 +3,8 @@ pt-BR:
     submit:
       user:
         create: "Quero me cadastrar"
+      question:
+        create: "Adicionar pergunta"
 
   form:
     error_message: "Verifique o formulário antes de continuar:"
@@ -15,3 +17,8 @@ pt-BR:
       email: "Seu e-mail"
       password: "Sua senha"
       password_confirmation: "Confirme sua senha"
+
+    question:
+      title: "Título da pergunta"
+      description: "Descreva sua pergunta"
+      category: "Categoria"

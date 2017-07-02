@@ -1,0 +1,28 @@
+<% if @question.errors.any? %>
+  <p><%= t("form.error_message") %></p>
+
+  <ul>
+    <% @question.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+
+<% end %>
+
+<%= form_for @question, url: new_question_path do |f| %>
+  <p>
+    <%= f.label :title, t("form.question.title") %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description, t("form.question.description") %>
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :category_id, t("form.question.category") %>
+    <%= f.collection_select :category_id, Category.all, :id, :name, prompt: " -- Selecione uma categoria --" %>
+  </p>
+  <p class="submit">
+    <%= f.submit %>
+  </p>
+<% end %>
