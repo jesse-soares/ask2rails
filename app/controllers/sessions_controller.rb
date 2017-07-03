@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
   before_action :redirect_logged_user, except: [:destroy]
 
+  layout "window"
+  
   def new
   end
 

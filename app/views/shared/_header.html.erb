@@ -1,0 +1,29 @@
+<header>
+  <%= link_to image_tag("logo.png", :alt => "Hackerboard"), root_path %>
+
+  <nav class="main-nav">
+    <ul>
+      <li>
+        <%= link_to t("menu.new_question"), new_question_path %>
+      </li>
+
+      <% if logged_in? %>
+        <li class="account-info">
+          <%= t("greeting.message", :name => current_user.name) %>
+        </li>
+
+        <li>
+          <%= link_to t("menu.logout"), logout_path %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to t("menu.signup"), signup_path %>
+        </li>
+
+        <li>
+          <%= link_to t("menu.login"), login_path %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</header>

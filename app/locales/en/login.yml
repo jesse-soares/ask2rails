@@ -1,3 +1,6 @@
 pt-BR:
   login:
     you_must_be_logged_in: You must be logged in to access this page.
+    dont_have_an_account_html: |
+      If you already has an account, insert your data to login.
+      Don't have an account? <a href="%{url}">Sign up now!</a>

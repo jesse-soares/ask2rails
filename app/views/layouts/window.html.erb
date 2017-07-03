@@ -3,7 +3,7 @@
   <head>
     <title>Ask2rails</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag "application", media: 'all' %>
+    <%= stylesheet_link_tag "window", media: 'all' %>
   </head>
 
   <body>
@@ -14,12 +14,6 @@
       <section class="main">
         <%= yield %>
       </section>
-
-      <% if sidebar = yield(:sidebar) %>
-        <aside class="sidebar">
-          <%= sidebar %>
-        </aside>
-      <% end %>
     </div>
   </body>
 </html>

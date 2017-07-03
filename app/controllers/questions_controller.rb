@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :require_logged_user, only: [:new, :create]
+  layout "window", except: :index
 
   def index
   end

@@ -1,3 +1,7 @@
 pt-BR:
   login:
     you_must_be_logged_in: Você deve fazer o login para acessar essa página.
+    dont_have_an_account_html: |
+      Se você já tem uma conta, informe seus
+      dados para fazer o login. Ainda não é
+      cadastrado? <a href="%{url}">Crie sua conta agora!</a>

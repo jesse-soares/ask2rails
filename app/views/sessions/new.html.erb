@@ -1,3 +1,7 @@
+<p>
+  <%= t("login.dont_have_an_account_html", url: signup_path) %>
+</p>
+
 <%= form_tag login_path do %>
   <p>
     <%= hidden_field_tag :return_to, params[:return_to] %>
@@ -12,5 +16,6 @@
 
   <p class="submit">
     <%= submit_tag t("form.buttons.login") %>
+    <%= link_to t("actions.back"), root_path %>
   </p>
 <% end %>
