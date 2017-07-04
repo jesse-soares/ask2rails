@@ -1,0 +1,42 @@
+<div class="question-details">
+  <h1><%= @question.title %></h1>
+  <p class="about">
+    <%= render "shared/user", :user => @question.user %>
+    <time datetime="<%= @question.created_at.xmlschema %>">
+      <%= t("question.created_at", :time => time_ago_in_words(@question.created_at)) %>
+    </time>
+  </p>
+
+  <%= simple_format @question.description %>
+</div>
+
+<% content_for :sidebar do %>
+  <p>
+    <%= link_to t("actions.remove"), remove_question_path(@question) %>
+  </p>
+
+  <ul class="question-info">
+    <li>
+      <strong><%= @question.views_count %></strong>
+      visitas
+    </li>
+
+    <li>
+      <strong>5</strong>
+      respostas
+    </li>
+
+    <li class="feed">
+      <a href="#">RSS</a>
+    </li>
+  </ul>
+
+  <h1>Busca</h1>
+
+  <form action="/search">
+    <p>
+      <input type="search" autocomplete results="5">
+      <input type="submit" value="OK">
+    </p>
+  </form>
+<% end %>

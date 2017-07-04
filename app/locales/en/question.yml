@@ -1,0 +1,12 @@
+en:
+  question:
+    created_at: "asked %{time} ago"
+
+    filters:
+      all: All
+      unanswered: Unanswered
+
+    views_count_html:
+      zero: no visits
+      one: 1 <span>visit</span>
+      other: "%{count} <span>visits</span>"

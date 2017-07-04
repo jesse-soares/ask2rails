@@ -1,0 +1,12 @@
+pt-BR:
+  question:
+    created_at: "perguntou há %{time}"
+
+    filters:
+      all: Todas
+      unanswered: Não respondidas
+
+    views_count_html:
+      zero: nenhuma visita
+      one: 1 <span>visita</span>
+      other: "%{count} <span>visitas</span>"

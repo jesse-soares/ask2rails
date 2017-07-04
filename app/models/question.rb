@@ -4,5 +4,10 @@ class Question < ApplicationRecord
   belongs_to :user
   belongs_to :category
 
-  validates_presence_of :title, :description
+  validates_presence_of :description
+  validates_length_of :title, minimum: 10
+
+  def viewed!
+    increment!(:views_count)
+  end
 end

@@ -1,0 +1,17 @@
+<h1>Remover pergunta</h1>
+
+<p>
+  Tem certeza que deseja remover a pergunta
+  <strong>"<%= @question.title %>"</strong>
+</p>
+<p>
+  Isso irá remover também todas as respostas.
+  <strong>Não será possível desfazer essa ação!</strong>
+
+  <%= form_tag remove_question_path(@question), method: :delete do %>
+    <p class="submit">
+    <%= submit_tag "Sim, quero remover!" %>
+    <%= link_to "Cancelar", question_path(@question) %>
+    </p>
+  <% end %>
+</p>

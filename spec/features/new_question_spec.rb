@@ -10,7 +10,7 @@ RSpec.describe "New question", type: :feature do
       visit root_path
       click_link t("menu.new_question")
 
-      fill_in t("form.question.title"), with: "TITLE"
+      fill_in t("form.question.title"), with: "TITLE WITH AT LEAST 10 CHARACTERS"
       fill_in t("form.question.description"), with: "DESCRIPTION"
       select category.name, from: t("form.question.category")
       click_button t("helpers.submit.question.create")

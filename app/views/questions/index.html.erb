@@ -1,0 +1,18 @@
+<h1>Últimas perguntas</h1>
+
+<%= render "filters" %>
+<%= render @questions %>
+
+<ul class="paginate">
+  <li class="disabled previous-page">
+    <span>Mais recentes</span>
+  </li>
+
+  <li class="page">
+    <span>Página 1</span>
+  </li>
+
+  <li class="enabled next-page">
+    <a href="#">Mais antigas</a>
+  </li>
+</ul>

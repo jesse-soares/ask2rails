@@ -7,6 +7,11 @@ RSpec.describe Question, type: :model do
       expect(question.errors[:title].size).to eql(1)
     end
 
+    it "requires title with minimum 10 characters" do
+      question = Question.create(title: "bla")
+      expect(question.errors[:title].size).to eql(1)
+    end
+
     it "requires description" do
       question = Question.create(description: nil)
       expect(question.errors[:description].size).to eql(1)

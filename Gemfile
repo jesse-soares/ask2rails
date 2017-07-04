@@ -33,6 +33,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "capybara"
   gem "factory_girl"
+  gem "faker"
 end
 
 group :development do

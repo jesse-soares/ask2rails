@@ -22,7 +22,7 @@ module Ask2rails
     config.generators.system_tests = nil
 
     config.time_zone = "Brasilia"
-    config.i18n.available_locales = [:"pt-BR"]
+    config.i18n.available_locales = [:"pt-BR", :en]
     config.i18n.load_path += Dir[Rails.root.join("app/locales/**/*.{rb,yml}").to_s]
     config.i18n.default_locale = :"pt-BR"
   end
