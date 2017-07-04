@@ -9,6 +9,8 @@ class Question < ApplicationRecord
   validates_presence_of :description
   validates_length_of :title, minimum: 10
 
+  scope :sort_by_newest, lambda { order("id DESC") }
+
   def viewed!
     increment!(:views_count)
   end

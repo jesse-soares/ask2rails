@@ -4,7 +4,7 @@ class QuestionsController < ApplicationController
   layout "window", except: [:index, :show]
 
   def index
-    @questions = Question.limit(20).includes(:user).order(:created_at)
+    @questions = QuestionFilter.filter(params)
     # alternative making one query with join
     # @questions = Question.limit(20).joins(:user).includes(:user)
   end
