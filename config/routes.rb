@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get    "questions/:id", to: "questions#show", as: :question
   get    "questions/:id/remove", to: "questions#remove", as: :remove_question
   delete "questions/:id/remove", to: "questions#destroy", as: false
+  get    "questions/:id/feed", to: "questions#feed", as: :feed, defaults: { format: 'xml' } 
 
   post "questions/:question_id/answers", to: "answers#create", as: :new_answer
 end

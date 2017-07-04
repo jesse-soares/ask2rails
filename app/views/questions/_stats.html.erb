@@ -1,15 +1,15 @@
 <ul class="question-info">
   <li>
-    <strong><%= @question.views_count %></strong>
+    <strong><%= question.views_count %></strong>
     visitas
   </li>
 
   <li>
-    <strong><%= @question.answers_count %></strong>
+    <strong><%= question.answers_count %></strong>
     respostas
   </li>
 
   <li class="feed">
-    <a href="#">RSS</a>
+    <%= link_to "RSS", feed_path(question) %>
   </li>
 </ul>

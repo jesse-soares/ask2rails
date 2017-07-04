@@ -5,4 +5,6 @@ class Answer < ApplicationRecord
   belongs_to :user
 
   validates_presence_of :question, :user, :content
+
+  scope :recent, lambda {|size = 10| limit(size).order("id DESC") }
 end

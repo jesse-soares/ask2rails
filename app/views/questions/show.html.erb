@@ -12,6 +12,6 @@
     <%= link_to t("actions.remove"), remove_question_path(@question) %>
   </p>
 
-  <%= render "stats" %>
+  <%= render "stats", question: @question %>
   <%= render "shared/search" %>
 <% end %>

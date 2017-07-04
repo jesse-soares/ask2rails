@@ -41,6 +41,11 @@ class QuestionsController < ApplicationController
     redirect_to root_path, notice: "Pergunta removida com sucesso!"
   end
 
+  def feed
+    @question = Question.find(params[:id])
+    @answers = @question.answers.recent
+  end
+
   private
   def question_params
     params.require(:question).permit(:title, :description, :category_id)

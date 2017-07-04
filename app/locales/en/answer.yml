@@ -1,3 +1,4 @@
 en:
   answer:
     created_at: "answered %{time} ago"
+    feed_item_title: "Answered by %{name}"

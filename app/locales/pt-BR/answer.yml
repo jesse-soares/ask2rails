@@ -1,3 +1,4 @@
 pt-BR:
   answer:
     created_at: "respondeu há %{time}"
+    feed_item_title: "Respondida por %{name}"
