@@ -10,6 +10,8 @@
   <%= simple_format @question.description %>
 </div>
 
+<%= render "answers", :question => @question, :answers => @answers %>
+
 <% content_for :sidebar do %>
   <p>
     <%= link_to t("actions.remove"), remove_question_path(@question) %>
@@ -22,7 +24,7 @@
     </li>
 
     <li>
-      <strong>5</strong>
+      <strong><%= @question.answers_count %></strong>
       respostas
     </li>
 

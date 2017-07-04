@@ -10,3 +10,13 @@ en:
       zero: no visits
       one: 1 <span>visit</span>
       other: "%{count} <span>visits</span>"
+
+    answers_count:
+      zero: No answers
+      one: 1 answer
+      other: "%{count} answers"
+
+    answers_count_html:
+      zero: No answers
+      one: 1 <span>answer<span>
+      other: "%{count} <span>answers</span>"

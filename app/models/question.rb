@@ -1,8 +1,10 @@
 class Question < ApplicationRecord
-  attr_readonly :user_id    # update not allowed
+  attr_readonly :user_id                      # update not allowed
 
-  belongs_to :user
-  belongs_to :category
+  belongs_to :user, counter_cache: true       # update `users.questions_count`
+  belongs_to :category, counter_cache: true   # update `categories.questions_count`
+
+  has_many :answers, -> { includes :user }    # eager load `answers.user`
 
   validates_presence_of :description
   validates_length_of :title, minimum: 10

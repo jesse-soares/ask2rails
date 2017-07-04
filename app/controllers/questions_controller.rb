@@ -3,7 +3,6 @@ class QuestionsController < ApplicationController
   
   layout "window", except: [:index, :show]
 
-
   def index
     @questions = Question.limit(20).includes(:user).order(:created_at)
     # alternative making one query with join
@@ -28,6 +27,7 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     @question.viewed!
+    @answers = @question.answers
   end
 
   def remove

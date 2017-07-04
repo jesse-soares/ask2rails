@@ -4,7 +4,7 @@ Dir[Rails.root.join("spec/factories/*.rb")].each do |file|
 end
 
 # Clean up database
-[User, Category].map(&:delete_all)
+[User, Category, Answer].map(&:delete_all)
 
 # Create default user
 jesse = FactoryGirl.create(:user, {
@@ -35,5 +35,14 @@ questions = []
     category: categories.sample,
     title: Faker::Lorem.sentence([*3..10].sample),
     description: Faker::Lorem.paragraphs([*3..5].sample).join("\n\n")
+  })
+end
+
+# Create answers
+200.times do
+  FactoryGirl.create(:answer, {
+    user: users.sample,
+    question: questions.sample,
+    content: Faker::Lorem.paragraphs([*3..5].sample).join("\n\n")
   })
 end

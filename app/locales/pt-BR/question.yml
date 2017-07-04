@@ -10,3 +10,13 @@ pt-BR:
       zero: nenhuma visita
       one: 1 <span>visita</span>
       other: "%{count} <span>visitas</span>"
+
+    answers_count:
+      zero: Nenhuma resposta
+      one: 1 resposta
+      other: "%{count} respostas"
+
+    answers_count_html:
+      zero: Nenhuma resposta
+      one: 1 <span>resposta</span>
+      other: "%{count} <span>respostas</span>"

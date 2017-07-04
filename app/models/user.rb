@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_secure_password # create and validate fields :password, :password_confirmation and :password_digest
 
   has_many :questions
+  has_many :answers
 
   validates_presence_of :name
   validates_format_of :email, :with => EMAIL_FORMAT

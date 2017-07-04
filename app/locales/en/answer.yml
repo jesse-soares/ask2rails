@@ -1,0 +1,3 @@
+en:
+  answer:
+    created_at: "answered %{time} ago"

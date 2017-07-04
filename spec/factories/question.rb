@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :question do
-    title "TITLE"
+    sequence(:title) { |n| "QUESTION #{n}" }
     description "DESCRIPTION"
     association :user
     association :category

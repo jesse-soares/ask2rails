@@ -1,0 +1,3 @@
+pt-BR:
+  answer:
+    created_at: "respondeu há %{time}"

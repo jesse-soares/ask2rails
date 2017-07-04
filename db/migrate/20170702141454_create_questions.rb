@@ -10,6 +10,7 @@ class CreateQuestions < ActiveRecord::Migration[5.1]
       t.timestamps
     end
 
+    # add fk and indexes
     add_foreign_key :questions, :users, on_delete: :cascade
     add_foreign_key :questions, :categories, on_delete: :nullify
   end

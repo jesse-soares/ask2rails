@@ -1,0 +1,12 @@
+<article class="answer" id="<%= dom_id(answer) %>">
+  <p class="about">
+    <%= render "shared/user", :user => answer.user %>
+    <time datetime="<%= answer.created_at.xmlschema %>">
+      <%= t("answer.created_at", :time => time_ago_in_words(answer.created_at)) %>
+    </time>
+  </p>
+
+  <p>
+    <%= simple_format answer.content %>
+  </p>
+</article>
