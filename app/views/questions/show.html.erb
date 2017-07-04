@@ -1,44 +1,17 @@
-<div class="question-details">
-  <h1><%= @question.title %></h1>
-  <p class="about">
-    <%= render "shared/user", :user => @question.user %>
-    <time datetime="<%= @question.created_at.xmlschema %>">
-      <%= t("question.created_at", :time => time_ago_in_words(@question.created_at)) %>
-    </time>
-  </p>
+<%= render "details", question: @question %>
+<%= render "answers", question: @question, answers: @answers %>
 
-  <%= simple_format @question.description %>
-</div>
-
-<%= render "answers", :question => @question, :answers => @answers %>
+<% if logged_in? %>
+  <%= render "answer_form", question: @question, answer: @answer %>
+<% else %>
+  <%= render "login_to_answer", question: @question %>
+<% end %>
 
 <% content_for :sidebar do %>
   <p>
     <%= link_to t("actions.remove"), remove_question_path(@question) %>
   </p>
 
-  <ul class="question-info">
-    <li>
-      <strong><%= @question.views_count %></strong>
-      visitas
-    </li>
-
-    <li>
-      <strong><%= @question.answers_count %></strong>
-      respostas
-    </li>
-
-    <li class="feed">
-      <a href="#">RSS</a>
-    </li>
-  </ul>
-
-  <h1>Busca</h1>
-
-  <form action="/search">
-    <p>
-      <input type="search" autocomplete results="5">
-      <input type="submit" value="OK">
-    </p>
-  </form>
+  <%= render "stats" %>
+  <%= render "shared/search" %>
 <% end %>

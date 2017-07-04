@@ -3,9 +3,15 @@ en:
     users:
       create:
         notice: Account successfully created. Input your data to login!
+    
     sessions:
       create:
-        alert: E-mail/senha invalid
+        alert: Invalid e-mail/password
+    
     questions:
       create:
         notice: Your question was successfully created.
+    
+    answers:
+      create:
+        notice: Your answer was successfully created.

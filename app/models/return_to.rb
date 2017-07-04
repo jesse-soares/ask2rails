@@ -8,6 +8,7 @@ class ReturnTo
     uri = URI.parse(return_to)
     path = uri.path
     path << "?#{uri.query}" if uri.query
+    path << "##{uri.fragment}" if uri.fragment
     path
   rescue URI::InvalidURIError
     @default_path

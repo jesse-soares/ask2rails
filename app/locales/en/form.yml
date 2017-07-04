@@ -2,23 +2,28 @@ en:
   helpers:
     submit:
       user:
-        create: "Create my account"
+        create: Create my account
       question:
-        create: "Add question"
+        create: Add question
+      answer:
+        create: Send answer
 
   form:
     error_message: "Check the form before continue:"
 
     buttons:
-      login: "Login"
+      login: Login
 
     user:
-      name: "Your name"
-      email: "Your e-mail"
-      password: "Your password"
-      password_confirmation: "Confirm your password"
+      name: Your name
+      email: Your e-mail
+      password: Your password
+      password_confirmation: Confirm your password
 
     question:
-      title: "Question title"
-      description: "Insert your question description"
-      category: "Category"
+      title: Question title
+      description: Insert your question description
+      category: Category
+
+    answer:
+      content: Answer this question

@@ -2,23 +2,28 @@ pt-BR:
   helpers:
     submit:
       user:
-        create: "Quero me cadastrar"
+        create: Quero me cadastrar
       question:
-        create: "Adicionar pergunta"
+        create: Adicionar pergunta
+      answer:
+        create: Enviar resposta
 
   form:
     error_message: "Verifique o formulário antes de continuar:"
 
     buttons:
-      login: "Acessar minha conta"
+      login: Acessar minha conta
 
     user:
-      name: "Seu nome"
-      email: "Seu e-mail"
-      password: "Sua senha"
-      password_confirmation: "Confirme sua senha"
+      name: Seu nome
+      email: Seu e-mail
+      password: Sua senha
+      password_confirmation: Confirme sua senha
 
     question:
-      title: "Título da pergunta"
-      description: "Descreva sua pergunta"
-      category: "Categoria"
+      title: Título da pergunta
+      description: Descreva sua pergunta
+      category: Categoria
+
+    answer:
+      content: Responda essa pergunta

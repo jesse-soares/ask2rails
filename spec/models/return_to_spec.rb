@@ -22,6 +22,11 @@ RSpec.describe ReturnTo do
     expect(path).to eql("/chosen?a=1&b=2")
   end
 
+  it "returns with fragment" do
+    path = ReturnTo.new("/default", "/chosen#test").path
+    expect(path).to eql("/chosen#test")
+  end
+
   it "ignores host" do
     path = ReturnTo.new("/default", "http://example.org/chosen").path
     expect(path).to eql("/chosen")

@@ -20,3 +20,5 @@ en:
       zero: No answers
       one: 1 <span>answer<span>
       other: "%{count} <span>answers</span>"
+
+    login_to_answer_html: To answer, <a href="%{url}">do login</a>

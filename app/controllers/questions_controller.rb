@@ -28,6 +28,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @question.viewed!
     @answers = @question.answers
+    @answer = Answer.new
   end
 
   def remove

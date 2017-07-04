@@ -1,0 +1,11 @@
+<div class="question-details">
+  <h1><%= question.title %></h1>
+  <p class="about">
+    <%= render "shared/user", user: question.user %>
+    <time datetime="<%= @question.created_at.xmlschema %>">
+      <%= t("question.created_at", time: time_ago_in_words(question.created_at)) %>
+    </time>
+  </p>
+
+  <%= simple_format question.description %>
+</div>

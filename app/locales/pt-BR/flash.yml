@@ -3,9 +3,15 @@ pt-BR:
     users:
       create:
         notice: Seu cadastro foi realizado com sucesso. Informe seus dados para entrar!
+    
     sessions:
       create:
         alert: E-mail/senha inválidos
+    
     questions:
       create:
         notice: Sua pergunta foi adicionada com sucesso.
+    
+    answers:
+      create:
+        notice: Sua resposta foi adicionada com sucesso.

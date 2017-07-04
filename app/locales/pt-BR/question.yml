@@ -20,3 +20,5 @@ pt-BR:
       zero: Nenhuma resposta
       one: 1 <span>resposta</span>
       other: "%{count} <span>respostas</span>"
+
+    login_to_answer_html: Para responder, <a href="%{url}">faça o login</a>
