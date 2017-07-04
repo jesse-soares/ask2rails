@@ -1,0 +1,5 @@
+en:
+  paginate:
+    next: Olders
+    previous: Newers
+    page: Page %{page}
