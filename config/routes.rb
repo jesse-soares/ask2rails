@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   get    "questions/:id/feed", to: "questions#feed", as: :feed, defaults: { format: 'xml' } 
 
   post "questions/:question_id/answers", to: "answers#create", as: :new_answer
+
+  get "categories/:category_id", to: "questions#index", as: :category
 end

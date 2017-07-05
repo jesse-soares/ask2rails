@@ -10,4 +10,8 @@ class User < ApplicationRecord
   validates_presence_of :name
   validates_format_of :email, :with => EMAIL_FORMAT
   validates_uniqueness_of :email
+
+  scope :recent, lambda {|size = 20|
+    limit(size).order("id DESC")
+  }
 end

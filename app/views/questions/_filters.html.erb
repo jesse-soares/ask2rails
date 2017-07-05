@@ -1,4 +1,4 @@
-<ul class="filters all">
+<ul class="filters <%= params[:filter] || 'all' %>">
   <li class="all">
     <%= link_to t("question.filters.all"), root_path %>
   </li>

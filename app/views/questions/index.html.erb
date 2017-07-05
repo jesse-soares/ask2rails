@@ -3,3 +3,9 @@
 <%= render "filters" %>
 <%= render @questions, paginate: true %>
 <%= paginate @questions %>
+
+<% content_for :sidebar do %>
+  <%= render "shared/search" %>
+  <%= render "shared/categories" %>
+  <%= render "shared/recent_users" %>
+<% end %>

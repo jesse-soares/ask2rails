@@ -5,9 +5,8 @@ class QuestionFilter
         .includes(:user)
         .paginate(params[:page])
 
-    if params[:filter] == "unanswered"
-      scope = scope.where(answers_count: 0)
-    end
+    scope = scope.where(answers_count: 0) if params[:filter] == "unanswered"
+    scope = scope.where(category_id: params[:category_id]) if params[:category_id]
 
     scope
   end

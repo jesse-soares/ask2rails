@@ -1,0 +1,9 @@
+<h1>Novo no Hackerboard</h1>
+
+<ul class="users list">
+  <% User.recent(20).each do |user| %>
+    <li>
+      <%= render "shared/user", :user => user %>
+    </li>
+  <% end %>
+</ul>
